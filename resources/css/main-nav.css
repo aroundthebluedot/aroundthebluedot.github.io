@@ -1,0 +1,12 @@
+#main-nav {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#main-nav a {
+  margin-left: 1em;
+  margin-right: 1em;
+  text-decoration: none;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport" />
+    <title>Around the Blue Dot</title>
+    <base href="/" target="_self">
+    <script type="text/javascript" src="resources/js/page-loader.js"></script>
+    <link rel="stylesheet" type="text/css" href="resources/css/main.css">
+  </head>
+  <body>
+    <header id="main-title-header">
+      <div id="main-title-text">Around the Blue Dot</div>
+      <div id="main-title-ray">
+        <div id="main-title-ray-left">
+          <hr>
+        </div>
+        <span id="main-title-ray-dot">
+          &#x2022;
+        </span>
+        <div id="main-title-ray-right">
+          <hr>
+        </div>
+      </div>
+      <nav id="main-nav">
+        <a href="/" onClick="return loadPage('welcome.html', true, '/');">HOME</a>
+        <a href="/blog.html" onClick="return loadPage('blog.html', true, 'blog.html');">BLOG</a>
+        <a href="/boat.html" onClick="return loadPage('boat.html', true, 'boat.html');">BOAT</a>
+      </nav>
+    </header>
+    <main id="main-main">
+      <script type="text/javascript">
+        if(window.history) {
+          window.onpopstate = function (event) {
+            if(event.state == null) {
+              loadPage('welcome.html', false);
+            } else {
+              loadPage(event.state, false);
+            }
+          }
+        }
+        if(window.history && window.history.state) {
+          loadPage(window.history.state, false);
+        } else {
+          loadPage('welcome.html', false);
+        }
+      </script>
+    </main>
+    <footer id="main-footer">
+      <div>
+        <!-- SVG icons by http://neilorangepeel.com/free-social-icons/ -->
+        <a href="mailto:aroundthebluedot@gmail.com"><img src="resources/images/svg/smi/em.svg" alt="Email" title="Email to aroundtheworld@gmail.com"></a>
+        <a href="https://plus.google.com/u/0/115302878738145835340" target="_tab"><img src="resources/images/svg/smi/gp.svg" alt="Google +" title="Google+"></a>
+        <a href="https://www.instagram.com/skipperalex84/" target="_tab"><img src="resources/images/svg/smi/ig.svg" alt="Instagram" title="Instagram"></a>
+        <a href="https://www.pinterest.com/skipperalex84/" target="_tab"><img src="resources/images/svg/smi/pt.svg" alt="Pinterest" title="Pinterest"></a>
+        <a href="https://www.youtube.com/channel/UCPjmvj6JqviG03Ia_QYFzIw" target="_tab"><img src="resources/images/svg/smi/yt.svg" alt="YouTube" title="YouTube"></a>
+        <a href="https://www.reddit.com/user/skipper_alex/" target="_tab"><img src="resources/images/svg/smi/rd.svg" alt="Reddit" title="Reddit"></a>
+      </div>
+    </footer>
+  </body>
+</html>

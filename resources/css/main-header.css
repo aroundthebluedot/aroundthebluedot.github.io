@@ -1,0 +1,46 @@
+#main-title-header {
+  background-color: white;
+  left: 0;
+  padding-top: 1em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+#main-title-text {
+  font-size: 2em;
+  line-height: 0.5;
+  text-align: center;
+}
+
+#main-title-ray {
+  display: flex;
+  width: 100%;
+}
+
+#main-title-ray-left {
+  display: flex;
+  flex-grow: 6;
+  width: 60%;
+}
+#main-title-ray-left hr {
+  border-left-width: 0;
+  border-right-width: 0;
+  width: 100%;
+}
+
+#main-title-ray-right {
+  display: flex;
+  width: 40%;
+}
+
+#main-title-ray-right hr {
+  border-left-width: 0;
+  border-right-width: 0;
+  width: 100%;
+}
+
+#main-title-ray-dot {
+  color: steelblue;
+}
